@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css?family=Muli:300,700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FBFCFE;
+  font-family: "Muli", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  background-color: #FFF;
+  border: 3px black solid;
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 1000px;
+  text-align: center;
+}
+
+.code-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.code {
+  border-radius: 5px;
+  font-size: 75px;
+  height: 120px;
+  width: 100px;
+  border: 1px solid #EEE;
+  margin: 1%;
+  text-align: center;
+  font-weight: 300;
+  -moz-appearance: textfield;
+  /* This block gets rid of the up and down arrows
+  *   in the number input on Chrome and Safari
+   */
+}
+.code::-webkit-outer-spin-button, .code::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.code:valid {
+  border-color: #3498DB;
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.25);
+}
+
+.info {
+  background-color: #EAEAEA;
+  display: inline-block;
+  padding: 10px;
+  line-height: 20px;
+  max-width: 400px;
+  color: #777;
+  border: solid 1px #EAEAEA;
+  border-radius: 5px;
+  animation: flashRed 3.5s linear;
+}
+
+@keyframes flashRed {
+  0% {
+    background-color: #EAEAEA;
+    border: solid 1px #EAEAEA;
+    color: #777;
+  }
+  15% {
+    background-color: #FFEAEA;
+    border: solid 1px #FF6565;
+    color: #CC6565;
+  }
+  100% {
+    background-color: #EAEAEA;
+    border: solid 1px #EAEAEA;
+    color: #777;
+  }
+}
+@media (max-width: 675px) {
+  .code-container {
+    flex-wrap: wrap;
+  }
+
+  .code {
+    font-size: 60px;
+    height: 80px;
+    max-width: 70px;
+  }
+}
